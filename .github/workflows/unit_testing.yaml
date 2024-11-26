@@ -23,19 +23,7 @@ jobs:
     - name: Configure poetry
       run: |
         poetry config virtualenvs.in-project true
-    - name: Cache the virtualenv
-      uses: actions/cache@v2
-      with:
-        path: ./.venv
-        key: ${{ runner.os }}-venv-${{ hashFiles('**/poetry.lock') }}
+    - name: Check lock file
+      run: poetry check --lock
     - name: Install dependencies
-      run: |
-        poetry install --with test
-    - name: Lint with ruff
-      run: |
-        ruff check
-        ruff format
-    - name: Test with pytest
-      run: |
-        coverage run -m pytest -v
-        coverage xml
+      run: poetry install --with test
