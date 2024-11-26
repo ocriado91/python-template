@@ -1,7 +1,6 @@
 # python-template
 
 [![Unit Test](https://github.com/ocriado91/python-template/actions/workflows/unit_testing.yaml/badge.svg)](https://github.com/ocriado91/python-template/actions/workflows/unit_testing.yaml)
-
 [![codecov](https://codecov.io/gh/ocriado91/python-template/graph/badge.svg?token=AWI6GN9I73)](https://codecov.io/gh/ocriado91/python-template)
 
 This repository contains a template for Python projects based on __my personal opinions__ about best practices, and quoting Groucho Marx:
