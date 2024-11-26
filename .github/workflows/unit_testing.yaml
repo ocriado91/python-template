@@ -20,10 +20,14 @@ jobs:
     - name: Install poetry
       run: |
         pip install poetry
-    - name: Configure poetry
-      run: |
-        poetry config virtualenvs.in-project true
     - name: Check lock file
       run: poetry check --lock
     - name: Install dependencies
       run: poetry install --with test
+    - name: Check linter
+      run: |
+        poetry run ruff check
+        poetry run ruff format
+    - name: Run pytest
+        poetry run coverage run -m pytest -v
+        poetry run coverage xml
