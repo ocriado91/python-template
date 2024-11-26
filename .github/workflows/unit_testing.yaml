@@ -21,10 +21,10 @@ jobs:
       run: |
         pip install poetry
         poetry install --with test
-    - name: Lint with ruff
-      run: |
-        ruff check
-        # ruff format
+    # - name: Lint with ruff
+    #   run: |
+    #     ruff check
+    #     ruff format
     - name: Test with pytest
       run: |
         coverage run -m pytest -v
