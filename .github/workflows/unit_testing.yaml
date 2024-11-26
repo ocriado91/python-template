@@ -29,5 +29,6 @@ jobs:
         poetry run ruff check
         poetry run ruff format
     - name: Run pytest
+      run: |
         poetry run coverage run -m pytest -v
         poetry run coverage xml
