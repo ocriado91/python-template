@@ -1,10 +1,10 @@
 [tool.poetry]
 name = "calculator"
-version = "0.1.1"
+version = "0.1.0"
 description = ""
 authors = ["Óscar Criado de la Torre <ocriado91@gmail.com>"]
 readme = "README.md"
-packages = [{include = "src"}]
+packages = [{include = "calculator", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
